@@ -34,21 +34,24 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(),
       body: ListView(
         children: <Widget>[
-          Text('First', style: TextStyle(fontSize: 43)),
-          Text('Second', style: TextStyle(fontSize: 43)),
-          Text('Third', style: TextStyle(fontSize: 43)),
-          Text('Fourth', style: TextStyle(fontSize: 43)),
-          Text('First', style: TextStyle(fontSize: 43)),
-          Text('Second', style: TextStyle(fontSize: 43)),
-          Text('Third', style: TextStyle(fontSize: 43)),
-          Text('Fourth', style: TextStyle(fontSize: 43)),
-          Text('First', style: TextStyle(fontSize: 43)),
-          Text('Second', style: TextStyle(fontSize: 43)),
-          Text('Third', style: TextStyle(fontSize: 43)),
-          Text('Fourth', style: TextStyle(fontSize: 43)),
-        ],
-      ),
-      bottomNavigationBar: BottomAppBar(),
+        Container(
+          color: Colors.red,
+          height: 100, 
+          width: 100),
+            Container(
+          color: Colors.blue,
+          height: 100, 
+          width: 100),
+            Container(
+          color: Colors.green,
+          height: 100, 
+          width: 100),
+            Container(
+          color: Colors.yellow,
+          height: 100, 
+          width: 100),
+          ]),
+           bottomNavigationBar: BottomAppBar(),
     );
   }
 }

@@ -27,21 +27,26 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [FlutterLogo(size: 45)],
         ),
       ),
       drawer: Drawer(),
-      body: Container(
-        width: 265,
-        height: 300,
-        decoration: BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(20),
-            bottomRight: Radius.circular(20),
-          ),
-        ),
+      body: ListView(
+        children: <Widget>[
+          Text('First', style: TextStyle(fontSize: 43)),
+          Text('Second', style: TextStyle(fontSize: 43)),
+          Text('Third', style: TextStyle(fontSize: 43)),
+          Text('Fourth', style: TextStyle(fontSize: 43)),
+          Text('First', style: TextStyle(fontSize: 43)),
+          Text('Second', style: TextStyle(fontSize: 43)),
+          Text('Third', style: TextStyle(fontSize: 43)),
+          Text('Fourth', style: TextStyle(fontSize: 43)),
+          Text('First', style: TextStyle(fontSize: 43)),
+          Text('Second', style: TextStyle(fontSize: 43)),
+          Text('Third', style: TextStyle(fontSize: 43)),
+          Text('Fourth', style: TextStyle(fontSize: 43)),
+        ],
       ),
       bottomNavigationBar: BottomAppBar(),
     );

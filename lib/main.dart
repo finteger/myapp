@@ -27,20 +27,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [FlutterLogo(size: 45)],
         ),
       ),
       drawer: Drawer(),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(height: 50, width: 450, color: Colors.red),
-          Container(height: 50, width: 450, color: Colors.blue),
-          Container(height: 50, width: 450, color: Colors.yellow),
-        ],
-      ),
+      body: Placeholder(),
       bottomNavigationBar: BottomAppBar(),
     );
   }

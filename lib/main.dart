@@ -30,12 +30,14 @@ class _Home_PageState extends State<Home_Page> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-          Text('Flutter App'), 
-          FlutterLogo(),
-          ]
+            FlutterLogo(size: 83),
+            Expanded(child: Text('Flutter App')),
+          ],
         ),
       ),
+      drawer: Drawer(),
     );
   }
 }

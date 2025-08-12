@@ -26,6 +26,16 @@ class Home_Page extends StatefulWidget {
 class _Home_PageState extends State<Home_Page> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Row(
+          children: [
+          Text('Flutter App'), 
+          FlutterLogo(),
+          ]
+        ),
+      ),
+    );
   }
 }

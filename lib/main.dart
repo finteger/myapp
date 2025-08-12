@@ -38,17 +38,20 @@ class _Home_PageState extends State<Home_Page> {
         ),
       ),
       drawer: Drawer(),
-      body: Column(
-        children: [
-          Container(color: Colors.blue, height: 100),
-          Divider(),
-          Container(color: Colors.blue, height: 100),
-          Divider(),
-          Container(color: Colors.blue, height: 100),
-          Divider(),
-          Container(color: Colors.blue, height: 100),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(color: Colors.blue, height: 200),
+            Divider(),
+            Container(color: Colors.blue, height: 200),
+            Divider(),
+            Container(color: Colors.blue, height: 200),
+            Divider(),
+            Container(color: Colors.blue, height: 200),
+          ],
+        ),
       ),
+      bottomNavigationBar: const BottomAppBar(color: Colors.red),
     );
   }
 }

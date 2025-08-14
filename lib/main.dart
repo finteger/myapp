@@ -58,7 +58,16 @@ class _Home_PageState extends State<Home_Page> {
           return containers[index];
         },
       ),
-      bottomNavigationBar: const BottomAppBar(color: Colors.red),
+      bottomNavigationBar: const BottomAppBar(
+        color: Colors.red,
+        child: Row(
+          children: [
+            IconButton(icon: Icon(Icons.home), onPressed: null),
+            IconButton(icon: Icon(Icons.settings), onPressed: null),
+            IconButton(icon: Icon(Icons.search), onPressed: null),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/screens/second_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: Home_Page(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Home_Page(),
+        '/second': (context) => const Second_Page(),
+      },
     );
   }
 }
@@ -72,5 +77,3 @@ class _Home_PageState extends State<Home_Page> {
     );
   }
 }
-
-

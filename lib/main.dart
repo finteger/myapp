@@ -63,14 +63,27 @@ class _Home_PageState extends State<Home_Page> {
           return containers[index];
         },
       ),
-      bottomNavigationBar: const BottomAppBar(
+      bottomNavigationBar: BottomAppBar(
         color: Colors.red,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            IconButton(icon: Icon(Icons.home, size: 34), onPressed: null),
-            IconButton(icon: Icon(Icons.settings, size: 34), onPressed: null),
-            IconButton(icon: Icon(Icons.search, size: 34), onPressed: null),
+            IconButton(
+              icon: const Icon(Icons.home, size: 34),
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.settings, size: 34),
+              onPressed: () {
+                Navigator.pushNamed(context, '/second');
+              },
+            ),
+            const IconButton(
+              icon: Icon(Icons.search, size: 34),
+              onPressed: null,
+            ),
           ],
         ),
       ),

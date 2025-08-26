@@ -88,6 +88,16 @@ class TaskProvider extends ChangeNotifier {
     tasks[index] = Task(id: task.id, name: task.name, completed: completed);
     notifyListeners();
   }
+
+  Future<void> removeTask(int index) async {
+    //uses array index  to find tasks
+    final task = tasks[index];
+    //delete the task from the collection
+    await taskService.deleteTasks(task.id);
+    //remote the task from the list in memory
+    tasks.removeAt(index);
+    notifyListeners();
+  }
 }
 
 class Home_Page extends StatefulWidget {

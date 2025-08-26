@@ -33,10 +33,36 @@ class TaskService {
         .map((doc) => Task.fromMap(doc.id, doc.data()))
         .toList();
   }
+
+  //another asynchronous Future to add tasks to the firestore
+  Future<String> addTask(String name) async {
+    final newTask = {
+      'name': name,
+      'completed': false,
+      'timestamp': FieldValue.serverTimestamp(),
+    };
+    final docRef = await db.collection('tasks').add(newTask);
+    return docRef.id;
+  }
+
+  //update task future
+  Future<void> updateTask(String id, bool completed) async {
+    await db.collection('tasks').doc(id).update({'completed': completed});
+  }
+
+  //Future is going to delete tasks
+  Future<void> deleteTasks(String id) async {
+    await db.collection('tasks').doc(id).delete();
+  }
 }
 
 //create a task provider to manage state
-class TaskProvider extends ChangeNotifier {}
+class TaskProvider extends ChangeNotifier {
+
+
+
+  
+}
 
 class Home_Page extends StatefulWidget {
   const Home_Page({super.key});
